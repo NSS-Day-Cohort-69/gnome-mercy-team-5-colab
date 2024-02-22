@@ -5,12 +5,16 @@
 */
 
 export const Crafters = () => {
-  const crafters = getCrafters();
+  // const crafters = getCrafters();
 
-  return `
-    <h3>Crafters</h3>
-    <select id="crafter">
-        <option value="0">--Choose A Crafter--</option>
-    </select>
+  let html = "<h2>Crafters</h2>"
+
+  html += `<label for="dropdown">
+
+
+              <select id="crafterdropdown">
+                <option value="0">--Choose A Crafter--</option>
+              </select>
   `;
+  return html
 };

@@ -10,11 +10,14 @@
 */
 
 import { GnomeMercy } from "./GnomeMercy.js";
+// import { CraftRequests } from "./CraftRequests.js";
+// import { Crafters } from "./Crafters.js";
 
 const mainContainer = document.querySelector("#container");
 
 const render = () => {
     const gnomeMercyHTML = GnomeMercy()
+ 
   /*
         Fetch all of the database so that it's stored in 
         application state. After all data is fetched, 
@@ -22,7 +25,7 @@ const render = () => {
         of state to HTML
     */
     container.innerHTML = gnomeMercyHTML;
-
+ 
 };
 
 render();
