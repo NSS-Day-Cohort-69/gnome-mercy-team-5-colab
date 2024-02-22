@@ -5,6 +5,11 @@
     components.
 */
 
+import { CraftRequests } from "./CraftRequests.js"
+import { Crafters } from "./Crafters.js"
+import { CraftingIngredients } from "./Ingredients.js"
+import { RequestForm } from "./RequestForm.js"
+
 document.addEventListener(
   "click",
   (clickEvent) => {
@@ -22,31 +27,12 @@ document.addEventListener(
 export const GnomeMercy = () => {
 let html = "<h1>Gnome Mercy</h1>"
 
-  html += `<div id="requestForm">
-            <label>Name:</label>
-              <div>
-                <input type="text" />
-              </div>
 
-            <label>Purpose:</label>
-              <div>
-                <input type="text" />
-              </div>
-              
-            <label for="dropdown">Type:</label>
-              <div>
-                <select id="dropdown">
-                  <option value="select">Select a type:</option>
-                  <option value="potion">Potion</option>
-                  <option value="elixir">Elixir</option>
-                </select>
-              </div>
-            <button data-id="submitRequest">Submit Request</button> 
-  
-  
-  
-  </div>
-  
+  html += `
+  ${RequestForm()}
+  ${CraftRequests()}
+  ${Crafters()}
+  ${CraftingIngredients()}
 `;
   return html
 }
