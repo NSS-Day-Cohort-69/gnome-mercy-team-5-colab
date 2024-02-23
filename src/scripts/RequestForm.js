@@ -6,6 +6,7 @@
 
 document.addEventListener("click", (clickEvt) => {
   if (clickEvt.target.id === "submitRequest") {
+    window.alert(`Thank you for your submission!`)
   }
 });
 
